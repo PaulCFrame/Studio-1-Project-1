@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
+    public static CameraShake Instance;
 
     // Transform of the camera to shake. Grabs the gameObject's transform
     // if null.
@@ -22,7 +23,17 @@ public class CameraShake : MonoBehaviour
 
     void Awake()
     {
-        if (camTransform == null)
+        if (Instance == null)
+        {
+            Instance = this;
+
+        }
+        else if
+            (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+            if (camTransform == null)
         {
             camTransform = GetComponent(typeof(Transform)) as Transform;
         }

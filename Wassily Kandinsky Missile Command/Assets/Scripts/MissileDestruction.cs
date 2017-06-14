@@ -10,7 +10,7 @@ public class MissileDestruction : MonoBehaviour {
     {
         Destroy(gameObject);
         Instantiate(MissileExplosionOBJ, transform.position, MissileExplosionOBJ.rotation);
-        
+        CameraShake.Instance.shakecamera();
     }
 
 }
