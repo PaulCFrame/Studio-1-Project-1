@@ -17,13 +17,13 @@ public class menuScript : MonoBehaviour {
     //Load the credits level
     public void ClickCredits()
     {
-        
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("CreditsScene");
     }
 
     //Return to the main menu
     public void ClickBack()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("MainMenuScene");
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("MenuScene");
     }
     
     //Exit the application
